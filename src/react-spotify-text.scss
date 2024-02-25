@@ -1,0 +1,55 @@
+.react-spotify-text {
+  
+    $mask-width: 1rem;
+    $buffer: 20%;
+    animation: mask infinite linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    &-wrapper {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    &-placeholder {
+      display: inline-block;
+    }
+  
+    &-inner {
+      mask-image: linear-gradient(
+        90deg,
+        #000 calc(100% - #{$mask-width}),
+        transparent 100%
+      );
+    }
+  
+    &-text {
+      display: inline-block;
+      padding-right: $buffer;
+      box-sizing: border-box;
+      animation: text infinite linear;
+    }
+  
+    @keyframes text {
+      #{100 - $buffer},
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  
+    @keyframes mask {
+      0%,
+      #{100 - $buffer*2} {
+        mask-image: linear-gradient(90deg, transparent 0, #000 $mask-width);
+      }
+      #{100 - $buffer},
+      100% {
+        mask-image: none;
+      }
+    }
+  }
+  
