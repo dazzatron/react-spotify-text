@@ -5,6 +5,7 @@
 If the text fits within its container, it will not animate. If it overflows it will animate right to left, pausing at the start, with a mask fading out the edges.
 
 ![React Spotify Text Example](https://raw.githubusercontent.com/dazzatron/react-spotify-text/master/example.gif)
+
 <small>(This gif is a really low FPS!)</small>
 
 **Note: by default react-spotify-text has no colour/background or font family applied, this is just a demo.**
