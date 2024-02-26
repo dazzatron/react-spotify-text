@@ -7,12 +7,12 @@ import "./react-spotify-text.scss";
 // base pause on something else, not speed
 // padding-right 1rem, not 10%, and calc transitions
 // tests
-// 1 command to delete old and publish
-// readme with images
-// props: speed, pause time, mask size, pause on hover
-// reset on update text
+// 1 command to delete old and publish new with bump in version
+// props: speed, pause time, mask size, pause on hover*
+// reset on update text*
 // fully test npm install
 // pixel perfect with spotify
+// accessibility
 
 const ReactSpotifyText = (props: { text: string }) => {
   const { text } = props;
