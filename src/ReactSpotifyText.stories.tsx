@@ -10,16 +10,31 @@ type Story = StoryObj<typeof ReactSpotifyText>;
 export default meta;
 
 export const Default: Story = {
+  parameters: {
+    layout: "fullscreen",
+  },
   render: () => (
     <div
       style={{
-        fontFamily: "arial",
-        fontSize: "1rem",
-        maxWidth: "100%",
-        width: "20rem",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#222",
+        color: "#fff",
       }}
     >
-      <ReactSpotifyText text="This is a really long title, check it out. Check this out." />
+      <div
+        style={{
+          fontFamily: "helvetica",
+          fontSize: "2rem",
+          maxWidth: "100%",
+          width: "35rem",
+          fontWeight: "bolder",
+        }}
+      >
+        <ReactSpotifyText text="This is a really long title, check it out. Check this out." />
+      </div>
     </div>
   ),
 };

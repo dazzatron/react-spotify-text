@@ -2,41 +2,37 @@ import useResizeObserver from "@react-hook/resize-observer";
 import React, { useRef, useState } from "react";
 import "./react-spotify-text.scss";
 
-// todo: 
+// todo:
 // base speed on width, not amount of chars
 // base pause on something else, not speed
 // padding-right 1rem, not 10%, and calc transitions
 // tests
-// publish
+// 1 command to delete old and publish
+// readme with images
+// props: speed, pause time, mask size, pause on hover
+// reset on update text
+// fully test npm install
+// pixel perfect with spotify
 
 const ReactSpotifyText = (props: { text: string }) => {
   const { text } = props;
   const reactSpotifyTextPlaceholderRef = useRef<HTMLDivElement>(null);
-  const reactSpotifyTextWrapperRef = useRef<HTMLDivElement>(null);
   const [isOverflowing, setIsOverflowing] = useState<boolean>(false);
   const animationDuration = text.length / 7.5 + "s";
 
-  const handleResize = () => {
+  useResizeObserver(reactSpotifyTextPlaceholderRef, () => {
     if (
-      reactSpotifyTextPlaceholderRef.current &&
-      reactSpotifyTextWrapperRef.current &&
-      reactSpotifyTextPlaceholderRef.current.clientWidth >
-        reactSpotifyTextWrapperRef.current.clientWidth
+      reactSpotifyTextPlaceholderRef.current!.clientWidth >=
+      reactSpotifyTextPlaceholderRef.current!.parentElement!.clientWidth
     ) {
       setIsOverflowing(true);
     } else {
       setIsOverflowing(false);
     }
-  };
-
-  useResizeObserver(reactSpotifyTextWrapperRef, () => handleResize());
-  useResizeObserver(reactSpotifyTextPlaceholderRef, () => handleResize());
+  });
 
   return (
-    <div
-      className="react-spotify-text-wrapper"
-      ref={reactSpotifyTextWrapperRef}
-    >
+    <div className="react-spotify-text-wrapper">
       <div
         style={{ visibility: isOverflowing ? "hidden" : "visible" }}
         className="react-spotify-text-placeholder"
