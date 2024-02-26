@@ -12,7 +12,7 @@ npm i react-spotify-text
 
 ## Demo
 
-![React Spotify Text Example](https://github.com/dazzatron/react-spotify-text/example.gif)
+![React Spotify Text Example](https://raw.githubusercontent.com/dazzatron/react-spotify-text/master/example.gif)
 
 ## Usage
 
