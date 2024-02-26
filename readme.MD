@@ -1,6 +1,6 @@
 # React Spotify Text
 
-####A small and simple React component inspired by the scrolling text in Spotify
+<b>A small and simple React component inspired by the scrolling text in Spotify</b>
 
 If the text fits within its container, it will not animate. If it overflows it will animate right to left, pausing at the start, with a mask fading out the edges.
 
