@@ -12,6 +12,8 @@ npm i react-spotify-text
 
 ## Demo
 
+![React Spotify Text Example](https://github.com/dazzatron/react-spotify-text/example.gif)
+
 ## Usage
 
 Usage example:
@@ -20,7 +22,7 @@ Usage example:
 import ReactSpotifyText from "ReactSpotifyText";
 
 const Example = () => (
-  <ReactSpotifyText text="Whispers of twilight serenade the moon, dancing shadows in a cosmic tune, stars waltz, a celestial swoon, night's embrace, a dream's monsoon." />
+  <ReactSpotifyText text="This is a really long title, check it out. Check this out." />
 );
 
 export default Example;
