@@ -27,7 +27,7 @@ Most styles applied to a parent element will work and not cause the component to
 Usage example:
 
 ```typescript
-import ReactSpotifyText from "ReactSpotifyText";
+import { ReactSpotifyText } from "react-spotify-text";
 
 const Example = () => (
   <ReactSpotifyText text="This is a really long title, check it out. Check this out." />

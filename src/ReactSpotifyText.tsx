@@ -13,6 +13,8 @@ import "./react-spotify-text.scss";
 // fully test npm install
 // pixel perfect with spotify
 // accessibility
+// fix imports
+// dont put sb files in dist folder
 
 const ReactSpotifyText = (props: { text: string }) => {
   const { text } = props;
